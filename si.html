@@ -6,21 +6,80 @@
     <title>SAIFUL ISLAM - CV</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Custom styles if needed, or for print adjustments */
+        /* Base styles */
+        body {
+            font-size: 10pt; /* Default font size for web view */
+        }
+
+        /* Print-specific styles */
         @media print {
             body {
-                font-size: 10pt;
+                font-size: 10pt; /* Ensure consistent font size for print */
+                margin: 0; /* Remove default body margins for cleaner print */
+                padding: 0; /* Remove default body padding for cleaner print */
+                -webkit-print-color-adjust: exact; /* For better background/text color printing */
+                print-color-adjust: exact;
             }
+            .container {
+                width: 21cm; /* A4 width */
+                min-height: 29.7cm; /* A4 height - use min-height for multi-page content */
+                margin: 0 auto; /* Center on page if browser allows */
+                padding: 1.5cm; /* Standard margins for A4 (e.g., 1.5cm all around) */
+                box-shadow: none !important; /* Explicitly remove shadow for print */
+                border-radius: 0 !important; /* Remove border-radius for print */
+            }
+            /* Hide elements not needed in print */
             .no-print {
-                display: none;
+                display: none !important;
+            }
+            /* Adjust spacing for print if needed */
+            section {
+                margin-bottom: 0.5cm; /* Reduce section margin for print */
+            }
+            h1, h2, h3, h4, h5, h6 {
+                margin-top: 0.2cm;
+                margin-bottom: 0.2cm;
+            }
+            p, ul, table {
+                margin-bottom: 0.1cm;
+            }
+
+            /* --- Table Specific Print Styles --- */
+            /* Remove overflow-x for table wrappers */
+            .overflow-x-auto {
+                overflow-x: visible !important;
+                /* If the table still overflows, you might need to adjust table-layout */
+                /* table-layout: fixed; */ /* Uncomment if columns still get cut */
+            }
+
+            table {
+                width: 100% !important; /* Ensure table takes full available print width */
+                border-collapse: collapse !important; /* For cleaner borders */
+            }
+
+            th, td {
+                padding: 0.1cm 0.2cm !important; /* Reduce padding for table cells */
+                font-size: 9pt !important; /* Slightly smaller font for table content */
+                white-space: normal !important; /* Allow text to wrap within cells */
+                word-wrap: break-word !important; /* Ensures long words break if needed */
+            }
+
+            /* Remove nowrap for cells that might have it */
+            .whitespace-nowrap {
+                white-space: normal !important;
+            }
+
+            /* Ensure borders are visible */
+            table, th, td {
+                border: 1px solid #e2e8f0 !important; /* Re-apply borders if they disappear */
             }
         }
     </style>
 </head>
 <body class="font-sans bg-gray-100 p-6">
     <div class="container mx-auto bg-white shadow-lg rounded-lg p-8 mt-4 mb-4">
-        <header class="text-center mb-8 pb-4 border-b border-gray-300">
-        <img src="Saiful_Islam.png" alt="SAIFUL ISLAM Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md">
+        <header class="text-center mb-8 pb-4 border-b border-gray-300 relative">
+            <img src="Saiful_Islam.png" alt="SAIFUL ISLAM Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md">
             <h1 class="text-4xl font-bold text-gray-800">SAIFUL ISLAM</h1>
             <p class="text-lg text-gray-600 mt-2">Shohid Borkot Shoroni, Chandna, Gazipur Sadar, Gazipur 1702</p>
             <p class="text-lg text-gray-600">+8801732484884 | saifulislam-74@dipti.com.bd</p>
@@ -43,7 +102,7 @@
 
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Employment History</h2>
-            <p class="text-gray-700 mb-4">Total Year of Experience: <strong class="font-medium">15.7 yrs</strong></p>
+            <p class="text-gray-700 mb-4">Total Year of Experience: <strong class="font-medium" id="total-experience"></strong></p>
 
             <div class="mb-6 border-b border-gray-200 pb-4">
                 <h3 class="text-xl font-semibold text-gray-800">1. Sr.Manager (Head of HRAC) <span class="text-base font-normal text-gray-600">(5.7 yrs)</span></h3>
@@ -114,7 +173,7 @@
 
             <div class="mb-6">
                 <h3 class="text-xl font-semibold text-gray-800">5. Jr. Executive <span class="text-base font-normal text-gray-600">(1.3 yrs)</span></h3>
-                <p class="text-gray-600 text-sm italic mb-2">7 Dec 2009 - 31 Mar 2011 | Ananta Garments Ltd. & Ananta Sportswear Ltd. concern of Ananta Group.</p>
+                <p class="text-gray-600 text-sm italic mb-2" data-start-date="2009-12-07">7 Dec 2009 - 31 Mar 2011 | Ananta Garments Ltd. & Ananta Sportswear Ltd. concern of Ananta Group.</p>
                 <p class="text-gray-600 mb-2">Area of Expertise: <span class="font-medium">HR Admin (1.3 yrs)</span></p>
                 <ul class="list-disc list-inside text-gray-700 space-y-1">
                     <li>Recruitment, File Processing, Daily attendance, Leave, Health and Safety, Fire safety, Security and Sanitation, Personal Maternity Benefits and implementation of Buyers COC etc.</li>
@@ -312,7 +371,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                 <div><strong class="font-medium">Looking For:</strong> Top Level Job</div>
                 <div><strong class="font-medium">Available For:</strong> Full Time</div>
-                <div><strong class="font-medium">Present Salary:</strong> Tk. 95000</div>
+<!--                 <div><strong class="font-medium">Present Salary:</strong> Tk. 95000</div> -->
                 <div><strong class="font-medium">Preferred Job Category:</strong> Garments/ Textile, IT/Telecommunication, Pharmaceutical</div>
                 <div><strong class="font-medium">Preferred District:</strong> Dhaka, Gazipur</div>
                 <div><strong class="font-medium">Preferred Country:</strong> Australia, Canada</div>
@@ -383,26 +442,77 @@
             </div>
         </section>
 
+        <div class="flex justify-center gap-4 mt-8 no-print">
+            <button id="printCvBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Print CV
+            </button>
+            <button id="downloadPdfBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Download PDF
+            </button>
+            <button onclick="window.location.href='index.html'" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">View Cover Letter</button>
+        </div>
+
         <footer class="text-center mt-8 pt-4 border-t border-gray-300 text-gray-500 text-sm no-print">
-            Powered By SI
+            Powered By SI.
         </footer>
     </div>
 
     <script>
-        // You can add JavaScript here for dynamic functionalities.
-        // For example:
-        // 1. A "Print CV" button:
-        // document.getElementById('print-button').addEventListener('click', () => window.print());
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Dynamic Experience Calculation (from previous step) ---
+            const startDateElement = document.querySelector('[data-start-date]');
+            const totalExperienceSpan = document.getElementById('total-experience');
 
-        // 2. Toggling sections if the CV gets very long:
-        // function toggleSection(sectionId) {
-        //     const section = document.getElementById(sectionId);
-        //     if (section.classList.contains('hidden')) {
-        //         section.classList.remove('hidden');
-        //     } else {
-        //         section.classList.add('hidden');
-        //     }
-        // }
+            if (startDateElement && totalExperienceSpan) {
+                const startDateString = startDateElement.dataset.startDate;
+                const startDate = new Date(startDateString);
+                const today = new Date();
+
+                let years = today.getFullYear() - startDate.getFullYear();
+                let months = today.getMonth() - startDate.getMonth();
+
+                if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
+                    years--;
+                    months += 12;
+                }
+
+                let experienceText = '';
+                if (years > 0) {
+                    experienceText += `${years} yr`;
+                    if (years > 1) experienceText += 's';
+                }
+                if (months > 0) {
+                    if (years > 0) experienceText += ' ';
+                    experienceText += `${months} mo`;
+                    if (months > 1) experienceText += 's';
+                }
+
+                if (years === 0 && months === 0 && today.getDate() >= startDate.getDate()) {
+                    experienceText = 'Less than 1 month';
+                } else if (years === 0 && months === 0 && today.getDate() < startDate.getDate()) {
+                    experienceText = 'Less than 1 month';
+                }
+
+                totalExperienceSpan.textContent = `${experienceText}`;
+            }
+
+            // --- Button Functionality ---
+            const printCvBtn = document.getElementById('printCvBtn');
+            const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+
+            if (printCvBtn) {
+                printCvBtn.addEventListener('click', () => {
+                    window.print(); // Triggers the browser's print dialog
+                });
+            }
+
+            if (downloadPdfBtn) {
+                downloadPdfBtn.addEventListener('click', () => {
+                    alert('To download as PDF, please select "Save as PDF" or "Microsoft Print to PDF" (Windows) / "Save as PDF" (macOS) from the printer options.');
+                    window.print(); // Triggers the browser's print dialog
+                });
+            }
+        });
     </script>
 </body>
 </html>
