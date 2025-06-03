@@ -129,9 +129,8 @@
 
         // JavaScript for PDF generation
         function makePDF() {
-            const element = document.querySelector('.print-area');
+            const element = document.querySelector('.max-w-4xl'); // Corrected selector
             const options = {
-                // Define margins for A4 page in inches (1 inch = 25.4mm)
                 margin: [12 / 25.4, 12 / 25.4, 12 / 25.4, 12 / 25.4], 
                 filename: 'Cover_Letter_Saiful_Islam.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
@@ -141,6 +140,7 @@
             // Use html2pdf to generate and save the PDF
             html2pdf().set(options).from(element).save();
         }
+
     </script>
 </body>
 </html>
