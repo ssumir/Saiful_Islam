@@ -118,13 +118,23 @@
         function setCurrentDate() {
             const dateElement = document.getElementById('currentDate');
             if (dateElement) {
-                // Set the date to May 15, 2025 as per the original request
-                const specificDate = new Date('2025-05-15T00:00:00'); 
+                // Create a new Date object to get the current date and time
+                const currentDate = new Date();
+        
+                // Options for formatting the date
                 const options = { day: '2-digit', month: 'long', year: 'numeric' };
-                const formattedDate = specificDate.toLocaleDateString('en-GB', options);
+        
+                // Format the current date using toLocaleDateString
+                // 'en-GB' locale will typically result in "14 June 2025" format
+                const formattedDate = currentDate.toLocaleDateString('en-GB', options);
+        
+                // Update the text content of the element
                 dateElement.textContent = formattedDate;
             }
         }
+
+// Ensure the DOM is fully loaded before trying to access the element
+document.addEventListener('DOMContentLoaded', setCurrentDate);
         document.addEventListener('DOMContentLoaded', setCurrentDate);
 
         // JavaScript for PDF generation
