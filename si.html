@@ -439,12 +439,12 @@
                 <p><strong class="font-medium">Relation:</strong> Professional</p>
             </div>
         </section>
-
+        </div>    
         <div class="flex justify-center gap-4 mt-8 no-print">
-            <button id="printCvBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Print CV
+            <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-sm transition duration-300 ease-in-out transform hover:scale-105">
+                Print
             </button>
-            <button id="downloadPdfBtn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+            <button onclick="makePDF()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Download PDF
             </button>
             <button onclick="window.location.href='index.html'" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">View Cover Letter</button>
@@ -453,8 +453,7 @@
         <footer class="text-center mt-8 pt-4 border-t border-gray-300 text-gray-500 text-sm no-print">
             Powered By SI SUMIR
         </footer>
-    </div>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Dynamic Experience Calculation (from previous step) ---
@@ -492,23 +491,6 @@
                 }
 
                 totalExperienceSpan.textContent = `${experienceText}`;
-            }
-
-            // --- Button Functionality ---
-            const printCvBtn = document.getElementById('printCvBtn');
-            const downloadPdfBtn = document.getElementById('downloadPdfBtn');
-
-            if (printCvBtn) {
-                printCvBtn.addEventListener('click', () => {
-                    window.print(); // Triggers the browser's print dialog
-                });
-            }
-
-            if (downloadPdfBtn) {
-                downloadPdfBtn.addEventListener('click', () => {
-                    alert('To download as PDF, please select "Save as PDF" or "Microsoft Print to PDF" (Windows) / "Save as PDF" (macOS) from the printer options.');
-                    window.print(); // Triggers the browser's print dialog
-                });
             }
         });
     </script>
