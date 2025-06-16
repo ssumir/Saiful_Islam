@@ -10,7 +10,7 @@
 </head>
 <body class="bg-gray-100 font-sans text-gray-700 leading-relaxed text-[10pt] print:m-0 print:p-0 print:bg-white print:text-[10pt] print:leading-normal">
 
-    <div class="max-w-4xl mx-auto my-2 p-10 bg-white rounded-lg shadow-xl print:shadow-none print:rounded-none print:m-0 print:p-[12mm] print:w-[210mm] print:min-h-[297mm] print:max-w-none">
+    <div id="myCoverLetter" class="max-w-4xl mx-auto my-2 p-11 bg-white rounded-lg shadow-xl print:shadow-none print:rounded-none print:m-0 print:p-[12mm] print:w-[210mm] print:min-h-[297mm] print:max-w-none">
         <div class="text-gray-800">
             
             <div class="flex justify-between items-center mb-4">
@@ -18,7 +18,7 @@
                 <p id="currentDate" class="text-gray-500 text-sm font-bold"></p>
             </div>
             
-            <p class="font-semibold text-gray-800 mb-6">Subject: Application for Head of HR (Sr. Manager/AGM)</p>
+            <p class="font-semibold text-gray-800 mb-6">Subject : Application for a Senior Position in the HR Department.</p>
 
             <p class="mt-6 text-justify">Dear Hiring Manager,</p>
 
@@ -139,14 +139,16 @@ document.addEventListener('DOMContentLoaded', setCurrentDate);
 
         // JavaScript for PDF generation
         function makePDF() {
-            const element = document.querySelector('.max-w-4xl'); // Corrected selector
+            const element = document.querySelector('#myCoverLetter'); // Corrected selector
             const options = {
                 margin: [12 / 25.4, 12 / 25.4, 12 / 25.4, 12 / 25.4], 
                 filename: 'Cover_Letter_Saiful_Islam.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2, useCORS: true },
-                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+                html2canvas: { scale: 3, useCORS: true},
+                compress: { deflate: true},
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait', dpi: 600, }
             };
+            
             // Use html2pdf to generate and save the PDF
             html2pdf().set(options).from(element).save();
         }
