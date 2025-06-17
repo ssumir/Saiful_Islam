@@ -3,81 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAIFUL ISLAM - CV</title>
+    <title>Cover Letter</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Base styles */
-        body {
-            font-size: 10pt; /* Default font size for web view */
-        }
-
-        /* Print-specific styles */
-        @media print {
-            body {
-                font-size: 10pt; /* Ensure consistent font size for print */
-                margin: 0; /* Remove default body margins for cleaner print */
-                padding: 0; /* Remove default body padding for cleaner print */
-                -webkit-print-color-adjust: exact; /* For better background/text color printing */
-                print-color-adjust: exact;
-            }
-            .container {
-                width: 21cm; /* A4 width */
-                min-height: 29.7cm; /* A4 height - use min-height for multi-page content */
-                margin: 0 auto; /* Center on page if browser allows */
-                padding: 1.5cm; /* Standard margins for A4 (e.g., 1.5cm all around) */
-                box-shadow: none !important; /* Explicitly remove shadow for print */
-                border-radius: 0 !important; /* Remove border-radius for print */
-            }
-            /* Hide elements not needed in print */
-            .no-print {
-                display: none !important;
-            }
-            /* Adjust spacing for print if needed */
-            section {
-                margin-bottom: 0.5cm; /* Reduce section margin for print */
-            }
-            h1, h2, h3, h4, h5, h6 {
-                margin-top: 0.2cm;
-                margin-bottom: 0.2cm;
-            }
-            p, ul, table {
-                margin-bottom: 0.1cm;
-            }
-
-            /* --- Table Specific Print Styles --- */
-            /* Remove overflow-x for table wrappers */
-            .overflow-x-auto {
-                overflow-x: visible !important;
-                /* If the table still overflows, you might need to adjust table-layout */
-                /* table-layout: fixed; */ /* Uncomment if columns still get cut */
-            }
-
-            table {
-                width: 100% !important; /* Ensure table takes full available print width */
-                border-collapse: collapse !important; /* For cleaner borders */
-            }
-
-            th, td {
-                padding: 0.1cm 0.2cm !important; /* Reduce padding for table cells */
-                font-size: 9pt !important; /* Slightly smaller font for table content */
-                white-space: normal !important; /* Allow text to wrap within cells */
-                word-wrap: break-word !important; /* Ensures long words break if needed */
-            }
-
-            /* Remove nowrap for cells that might have it */
-            .whitespace-nowrap {
-                white-space: normal !important;
-            }
-
-            /* Ensure borders are visible */
-            table, th, td {
-                border: 1px solid #e2e8f0 !important; /* Re-apply borders if they disappear */
-            }
-        }
-    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans bg-gray-100 p-6">
-    <div class="container mx-auto bg-white shadow-lg rounded-lg p-8 mt-4 mb-4">
+<body class="bg-gray-100 font-sans text-gray-700 leading-relaxed text-[10pt] print:m-0 print:p-0 print:bg-white print:text-[10pt] print:leading-normal">
+
+    <div id="myCV" class="max-w-4xl mx-auto my-2 p-11 bg-white rounded-lg shadow-xl print:shadow-none print:rounded-none print:m-0 print:p-[12mm] print:w-[210mm] print:min-h-[297mm] print:max-w-none">
+    
         <header class="text-center mb-8 pb-4 border-b border-gray-300 relative">
             <img src="Saiful_Islam.png" alt="SAIFUL ISLAM Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md">
             <h1 class="text-4xl font-bold text-gray-800">SAIFUL ISLAM</h1>
@@ -86,22 +20,22 @@
         </header>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Career Objective</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Career Objective</h2>
             <p class="text-gray-700 leading-relaxed">To leverage my expertise in the RMG sector in a senior leadership role, driving sustainable growth, operational excellence, and a culture of innovation while contributing to the long-term success of the organization.</p>
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Career Summary</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Career Summary</h2>
             <p class="text-gray-700 leading-relaxed">With 15+ years of leadership in HR, Admin, and Compliance within the RMG sector, I’ve excelled in recruitment, grievance handling, training, HRIS, conscious PMS, strategic HRM, and ESG initiatives. I’ve led digital transformation and policy development, achieving top ratings in audits like BSCI, SEDEX, CTPAT, WCA, Higg FEM & FSLM, FCCA, RCS, OCS, GOTS, and Accord. Partnering with H&M and Primark, I’ve ensured compliance with global standards, driving efficiency and sustainability.</p>
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Special Qualification</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Special Qualification</h2>
             <p class="text-gray-700 leading-relaxed">Possess in-depth knowledge of BLA 2006 and BLR 2015, with strong communication, decision-making, and leadership skills. Proficient in advanced MS Office and skilled in developing tools to streamline HR processes and enhance efficiency.</p>
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Employment History</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Employment History</h2>
             <p class="text-gray-700 mb-4">Total Year of Experience: <strong class="font-medium" id="total-experience"></strong></p>
 
             <div class="mb-6 border-b border-gray-200 pb-4">
@@ -182,7 +116,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Academic Qualification</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Academic Qualification</h2>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-200">
                     <thead>
@@ -257,7 +191,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Training Summary</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Training Summary</h2>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-200">
                     <thead>
@@ -341,7 +275,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Professional Qualification</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Professional Qualification</h2>
             <div class="overflow-x-auto">
                 <table class="min-w-full bg-white border border-gray-200">
                     <thead>
@@ -367,7 +301,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Career and Application Information</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Career and Application Information</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                 <div><strong class="font-medium">Looking For:</strong> Top Level Job</div>
                 <div><strong class="font-medium">Available For:</strong> Full Time</div>
@@ -380,7 +314,7 @@
         </section>
 
         <section class="mb-8"> 
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Skills</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Skills</h2>
             <div class="flex flex-wrap gap-2">
                 <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Team Leadership</span>
                 <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Compliance and Legal Knowledge</span>
@@ -394,7 +328,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Accomplishments (Projects)</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Accomplishments (Projects)</h2>
             <div class="mb-4">
                 <h3 class="text-xl font-semibold text-gray-800">Employee Grievance Portal</h3>
                 <p class="text-gray-600 text-sm italic">Issued On: 5/3/2025</p>
@@ -404,7 +338,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Extra Curricular Activities</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Extra Curricular Activities</h2>
             <ul class="list-disc list-inside text-gray-700 space-y-1">
                 <li>Developed innovative software tools, including Maternity Bill, Mario Calculator, and Grievance Portal, to streamline HR processes.</li>
                 <li>Successfully integrated IT solutions to enhance operational efficiency and data management, showcasing the ability to align HR practices with modern technology.</li>
@@ -412,7 +346,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">Personal Details</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">Personal Details</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
                 <div><strong class="font-medium">Father's Name:</strong> Md. Abul Kalam</div>
                 <div><strong class="font-medium">Mother's Name:</strong> Sayera Begum</div>
@@ -430,7 +364,7 @@
         </section>
 
         <section class="mb-8">
-            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-blue-500 pb-1">References</h2>
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3 border-b-2 border-gray-500 pb-1">References</h2>
             <div class="text-gray-700">
                 <p><strong class="font-medium">Name:</strong> Mr. Kayes Kayser</p>
                 <p><strong class="font-medium">Organization:</strong> Noman Group</p>
@@ -440,20 +374,24 @@
             </div>
         </section>
         </div>    
-        <div class="flex justify-center gap-4 mt-8 no-print">
-            <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-sm transition duration-300 ease-in-out transform hover:scale-105">
-                Print
-            </button>
-            <button onclick="makePDF()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                Download PDF
-            </button>
-            <button onclick="window.location.href='index.html'" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">View Cover Letter</button>
-        </div>
+    </div>
 
-        <footer class="text-center mt-8 pt-4 border-t border-gray-300 text-gray-500 text-sm no-print">
-            Powered By SI SUMIR
-        </footer>
-    
+    <div class="flex justify-center gap-2 mt-4 pb-2 print:hidden">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-sm transition duration-300 ease-in-out transform hover:scale-105">
+            Print
+        </button>
+        <button onclick="makePDF()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+            Download PDF
+        </button>
+        <button onclick="window.location.href='index.html'" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+            View Cover Letter
+        </button>
+    </div>
+
+    <footer class="text-center mt-2 pt-2 pb-2 border-t border-gray-300 text-gray-500 text-sm print:hidden">
+        Powered by SI SUMIR
+    </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // --- Dynamic Experience Calculation (from previous step) ---
@@ -493,6 +431,46 @@
                 totalExperienceSpan.textContent = `${experienceText}`;
             }
         });
+
+        // Function to set the current date
+        function setCurrentDate() {
+            const dateElement = document.getElementById('currentDate');
+            if (dateElement) {
+                // Create a new Date object to get the current date and time
+                const currentDate = new Date();
+        
+                // Options for formatting the date
+                const options = { day: '2-digit', month: 'long', year: 'numeric' };
+        
+                // Format the current date using toLocaleDateString
+                // 'en-GB' locale will typically result in "14 June 2025" format
+                const formattedDate = currentDate.toLocaleDateString('en-GB', options);
+        
+                // Update the text content of the element
+                dateElement.textContent = formattedDate;
+            }
+        }
+
+// Ensure the DOM is fully loaded before trying to access the element
+document.addEventListener('DOMContentLoaded', setCurrentDate);
+        document.addEventListener('DOMContentLoaded', setCurrentDate);
+
+        // JavaScript for PDF generation
+        function makePDF() {
+            const element = document.querySelector('#myCV'); // Corrected selector
+            const options = {
+                margin: [12 / 25.4, 12 / 25.4, 12 / 25.4, 12 / 25.4], 
+                filename: 'CV_Saiful_Islam.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 3, useCORS: true},
+                compress: { deflate: true},
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait', dpi: 600, }
+            };
+            
+            // Use html2pdf to generate and save the PDF
+            html2pdf().set(options).from(element).save();
+        }
+
     </script>
 </body>
 </html>
