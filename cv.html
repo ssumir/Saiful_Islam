@@ -4,22 +4,84 @@
   <meta charset="UTF-8">
   <title>Saiful Islam - CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    /* Modal overlay */
+    #cover-letter-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 1rem;
+    }
+    #cover-letter-content {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    #cover-letter-content h2 {
+      margin-bottom: 1rem;
+    }
+    #cover-letter-content button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: transparent;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    @media print {
+      #cover-letter-modal { display: none; }
+    }
+  </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800 leading-relaxed text-[11pt] print:m-0 print:p-0 print:bg-white print:text-[10pt] print:leading-normal">
 
-  <!-- Container -->
-  <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 mt-6 mb-20">
+  <!-- Cover Letter Modal -->
+  <div id="cover-letter-modal">
+    <div id="cover-letter-content">
+      <button onclick="closeModal()">✖</button>
+      <h2 class="text-md font-semibold text-gray-900">📄 Cover Letter</h2>
+       <p>
+      Dear Hiring Manager,<br><br>
+      I am excited to apply for the <strong>Junior Software Developer (Internship)</strong> position at ICT Bangladesh. 
+      With experience in <strong>C#, ASP.NET Core, SQL Server, and Web Development</strong>, I am eager to contribute my skills to your team while learning and growing professionally.<br><br>
+      I am confident that my technical knowledge and hands-on project experience make me a strong candidate for this role.<br><br>
+Best regards,<br><br>
+<em>
+  <img src="signature.png" alt="Signature" class="w-32 h-16">
+</em><br>
+<strong>Saiful Islam</strong><br>
+<small>Email: saifulislam-74@dipti.com.bd | Phone: +880-1732484884</small>
+
+    </p>
+    </div>
+  </div>
+
+  <!-- CV Content -->
+  <div id="cv-content" class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 mt-6 mb-20">
 
     <!-- Header -->
     <header class="text-center border-b pb-4 mb-6">
-     <img src="Saiful_Islam.png" alt="SAIFUL ISLAM Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md">
+      <img src="Saiful_Islam.png" alt="SAIFUL ISLAM Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md">
       <h1 class="text-3xl font-bold text-gray-900">Saiful Islam</h1>
       <p class="text-gray-600">Junior Software Developer (Internship)</p>
       <div class="mt-2 text-sm text-gray-600">
         📍 Gazipur, Bangladesh | 📞 +880-1732484884 | 
-        📧 <a href="mailto:saifulislam-74@dipti.com.bd" 
-              class="text-blue-600 hover:underline">saifulislam-74@dipti.com.bd</a> | 
-        💻 <a href="#" class="text-blue-600 hover:underline">GitHub/Portfolio</a>
+        📧 <a href="mailto:saifulislam-74@dipti.com.bd" class="text-blue-600 hover:underline">saifulislam-74@dipti.com.bd</a>
       </div>
     </header>
 
@@ -35,32 +97,19 @@
       </p>
     </section>
 
-        <!-- Education -->
+    <!-- Education -->
     <section class="mb-6">
       <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">🎓 Education</h2>
       <ul class="list-disc pl-5 space-y-3">
-         <li>
-          <strong>Diploma in Software Engineering (Java Track)</strong> – Daffodil International Professional Training Institute (DIPTI), 2022
-        </li>
-        <li>
-          <strong>AI Based Software Engineering (C# and Python)</strong> – ICT Bangladesh, 2025
-        </li>
+        <li><strong>Diploma in Software Engineering (Java Track)</strong> – Daffodil International Professional Training Institute (DIPTI), 2022</li>
+        <li><strong>AI Based Software Engineering (C# and Python)</strong> – ICT Bangladesh, 2025</li>
         <hr>
-        <li>
-          <strong>MBA in HRM</strong> – Uttara University, Bangladesh, 2017
-        </li>
-        <li>
-          <strong>Bachelor of Science (B.Sc.)</strong> – National University of Bangladesh, 2009
-        </li>
-        <li>
-          <strong>Higher Secondary Certificate (HSC)</strong> – Business Studies, Dhaka Board, 2005
-        </li>
-        <li>
-          <strong>Secondary School Certificate (SSC)</strong> – Business Studies, Dhaka Board, 2003
-        </li>
+        <li><strong>MBA in HRM</strong> – Uttara University, Bangladesh, 2017</li>
+        <li><strong>Bachelor of Science (B.Sc.)</strong> – National University of Bangladesh, 2009</li>
+        <li><strong>Higher Secondary Certificate (HSC)</strong> – Science, Cumilla Board, 2005</li>
+        <li><strong>Secondary School Certificate (SSC)</strong> – Science, Cumilla Board, 2003</li>
       </ul>
     </section>
-
 
     <!-- Skills -->
     <section class="mb-6">
@@ -92,23 +141,11 @@
     <section class="mb-6">
       <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">👨‍💻 Projects & Achievements</h2>
       <ul class="list-disc pl-5 space-y-2">
-        <li>
-          <strong>General & EMI Calculator App</strong> – Developed a responsive calculator app with tabbed interface using 
-          <em>HTML, CSS, JavaScript, Tailwind</em>. Implemented dynamic tab styling and localStorage functionality.
-        </li>
-        <li>
-          <strong>Mini Web & Android Applications</strong> – Created small-scale projects during diploma training using 
-          <em>Java, ASP.NET MVC, SQL Server</em>. Designed responsive UI with Bootstrap, and implemented CRUD functionality.
-        </li>
-        <li>
-          <strong>Student Management System (Ongoing)</strong> – ASP.NET Core MVC with Entity Framework. 
-          Features authentication, student/course management, and reporting modules. 
-          Practicing enterprise-level software architecture.
-        </li>
-        <li>
-          <strong>Notice Board Management API</strong> – Built layered architecture project with 
-          <em>NoticeBoard.API, NoticeBoard.Core, NoticeBoard.Infrastructure</em>. Practiced clean separation of concerns.
-        </li>
+        <li><strong>General & EMI Calculator App</strong> – Developed a responsive calculator app with tabbed interface using <em>HTML, CSS, JavaScript, Tailwind</em>.</li>
+        <li><strong>Mini Web & Android Applications</strong> – Created small-scale projects during diploma training using <em>Java, ASP.NET MVC, SQL Server</em>.</li>
+        <li><strong>SK Ladies Corner-Ecommerce Management System</strong> – ASP.NET Core MVC with Entity Framework. Features authentication, Product management, and reporting modules.</li>
+        <li><strong>Course Management System API</strong> – Built layered architecture project with <em>CourseManagementSystem.API, Core, Infrastructure</em>.</li>
+        <li><strong>Employee Grievance Portal</strong> – Built with <em>JavaScript, Bootstrap, Tailwind</em>. Visit: <a class="text-blue-600 hover:underline" href="https://ssumir.github.io/employee-grievance-portal/empmgt">link</a></li>
       </ul>
     </section>
 
@@ -124,33 +161,36 @@
         <li>Eagerness to learn new tech</li>
       </ul>
     </section>
-
-    <!-- References -->
-    <section>
-      <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">📬 References</h2>
-      <p>Available upon request</p>
-    </section>
   </div>
 
-  <!-- Footer -->
-  <div class="fixed bottom-0 left-0 right-0 bg-gray-100 py-3 shadow-inner flex justify-center gap-4 print:hidden">
+  <!-- Footer Buttons -->
+  <div class="fixed bottom-0 left-0 right-0 bg-gray-100 py-2 shadow-inner flex justify-center gap-4 print:hidden">
     <button onclick="window.print()" 
-      class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition">
+      class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded-lg shadow-md transition transform hover:scale-105">
       Print
     </button>
-    <button onclick="makePDF()" 
-      class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition">
+    <button onclick="downloadPDF()" 
+      class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded-lg shadow-md transition transform hover:scale-105">
       Download PDF
-    </button>
-    <button onclick="window.location.href='si.html'" 
-      class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-lg shadow-md transition">
-      View CV
     </button>
   </div>
 
   <script>
-    function makePDF(){
-      alert("PDF Export to be implemented with jsPDF/Print to PDF.");
+    function closeModal() {
+      document.getElementById('cover-letter-modal').style.display = 'none';
+    }
+
+    function downloadPDF() {
+      const element = document.getElementById('cv-content');
+      const opt = {
+        margin:       [10, 10, 10, 10],
+        filename:     'Saiful_Islam_CV.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true, logging: true },
+        jsPDF:        { unit: 'pt', format: 'a4', orientation: 'portrait' },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+      };
+      html2pdf().set(opt).from(element).save();
     }
   </script>
 
