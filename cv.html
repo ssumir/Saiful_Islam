@@ -5,102 +5,39 @@
   <title>Saiful Islam - CV</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <style>
-    /* Modal overlay */
-    #cover-letter-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 100;
-      padding: 1rem;
-    }
-    #cover-letter-content {
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 600px;
-      width: 100%;
-      max-height: 80vh;
-      overflow-y: auto;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      position: relative;
-    }
-    #cover-letter-content h2 {
-      margin-bottom: 1rem;
-    }
-    #cover-letter-content button {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background-color: transparent;
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-    }
-    @media print {
-      #cover-letter-modal { display: none; }
-    }
-  </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800 leading-relaxed text-[11pt] print:m-0 print:p-0 print:bg-white print:text-[10pt] print:leading-normal">
+<body class="bg-gray-100 font-sans text-gray-800 leading-relaxed text-[11pt]">
 
-  <!-- Cover Letter Modal -->
-  <div id="cover-letter-modal">
-    <div id="cover-letter-content">
-      <button onclick="closeModal()">✖</button>
-      <h2 class="text-md font-semibold text-gray-900">📄 Cover Letter</h2>
-       <p>
-      Dear Hiring Manager,<br><br>
-      I am excited to apply for the <strong>Junior Software Developer (Internship)</strong> position at ICT Bangladesh. 
-      With experience in <strong>C#, ASP.NET Core, SQL Server, and Web Development</strong>, I am eager to contribute my skills to your team while learning and growing professionally.<br><br>
-      I am confident that my technical knowledge and hands-on project experience make me a strong candidate for this role.<br><br>
-Best regards,<br><br>
-<em>
-  <img src="signature.jpg" alt="Signature" class="w-24 h-12">
-</em><br>
-<strong>Saiful Islam</strong><br>
-<small>Email: saifulislam-74@dipti.com.bd | Phone: +880-1732484884</small>
-
-    </p>
-    </div>
-  </div>
-
-  <!-- CV Content -->
-  <div id="cv-content" class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8 mt-6 mb-20">
+  <!-- CV Container -->
+  <div id="cv-content" class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-10 mt-10 mb-24">
 
     <!-- Header -->
-    <header class="text-center border-b pb-4 mb-6">
-      <img src="Saiful_Islam.png" alt="SAIFUL ISLAM Profile Picture" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500 shadow-md">
-      <h1 class="text-3xl font-bold text-gray-900">Saiful Islam</h1>
-      <p class="text-gray-600">Junior Software Developer (Internship)</p>
-      <div class="mt-2 text-sm text-gray-600">
-        📍 Gazipur, Bangladesh | 📞 +880-1732484884 | 
-        📧 <a href="mailto:saifulislam-74@dipti.com.bd" class="text-blue-600 hover:underline">saifulislam-74@dipti.com.bd</a>
+    <header class="text-center border-b pb-6 mb-8">
+      <img src="Saiful_Islam.png" alt="Saiful Islam Profile Picture" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-gray-300 shadow">
+      <h1 class="text-4xl font-bold text-gray-900">Saiful Islam</h1>
+      <p class="text-lg text-gray-700">Software Developer | HR & Compliance Expert</p>
+      <div class="mt-3 text-sm text-gray-600">
+        Gazipur, Bangladesh | +880-1732484884 | 
+        <a href="mailto:saifulislam-74@dipti.com.bd" class="text-blue-600 hover:underline">saifulislam-74@dipti.com.bd</a>
       </div>
     </header>
 
     <!-- Career Objective -->
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">🎯 Career Objective</h2>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Career Objective</h2>
       <p>
-        Motivated and detail-oriented <strong>Junior Software Developer (Internship)</strong> with skills in 
-        <strong>C#, ASP.NET Core, SQL Server, and Web Design (HTML, CSS, Bootstrap, Tailwind, JavaScript)</strong>. 
-        Strong foundation in software engineering concepts, with hands-on experience in developing web and Android applications. 
-        Seeking an internship opportunity at <strong>ICT Bangladesh</strong> to contribute technical expertise, enhance problem-solving abilities, 
-        and grow into a full-time software developer.
+        Motivated and detail-oriented <strong>Software Developer</strong> with hands-on experience in 
+        <strong>C#, ASP.NET Core, Entity Framework, SQL Server, and Web Development</strong>. 
+        Skilled in <strong>CQRS, LINQ, and Clean Architecture</strong> for building scalable enterprise solutions. 
+        Strong background in HR, Administration, and Factory Compliance adds cross-domain expertise. 
+        Seeking opportunities to apply both <strong>technical and managerial skills</strong> in global-standard organizations.
       </p>
     </section>
 
     <!-- Education -->
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">🎓 Education</h2>
-      <ul class="list-disc pl-5 space-y-3">
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Education</h2>
+      <ul class="list-disc pl-6 space-y-2">
         <li><strong>Diploma in Software Engineering (Java Track)</strong> – Daffodil International Professional Training Institute (DIPTI), 2022</li>
         <li><strong>AI Based Software Engineering (C# and Python)</strong> – ICT Bangladesh, 2025</li>
         <hr>
@@ -111,103 +48,129 @@ Best regards,<br><br>
       </ul>
     </section>
 
-    <!-- Skills -->
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">🛠 Technical Skills</h2>
-      <div class="grid grid-cols-2 gap-4">
+    <!-- Technical Skills -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Technical Skills</h2>
+      <div class="grid grid-cols-2 gap-6">
         <div>
-          <h3 class="font-semibold">Core Skills</h3>
-          <ul class="list-disc pl-5">
-            <li>C#, ASP.NET Core (MVC, Web API, Three Layer Architecture)</li>
-            <li>React.js</li>
-            <li>HTML, CSS, Bootstrap, Tailwind CSS, JavaScript</li>
+          <h3 class="font-semibold text-gray-800">Core Development</h3>
+          <ul class="list-disc pl-6">
+            <li>C#, ASP.NET Core (MVC, Web API, Razor Pages)</li>
+            <li>Entity Framework Core, LINQ, ADO.NET</li>
+            <li>CQRS & Repository Pattern, DDD, Clean Architecture</li>
             <li>Java Spring Boot</li>
-            <li>Microsoft SQL Server</li>
-            <li>Microsoft MySQL Server</li>
-            <li>MS Office Suite</li>
+            <li>React.js & Tailwind CSS</li>
+            <li>Flutter (beginner)</li>
           </ul>
         </div>
         <div>
-          <h3 class="font-semibold">Additional Skills</h3>
-          <ul class="list-disc pl-5">
-            <li>Python Programming (beginner)</li>
-            <li>Flutter Development (beginner)</li>
+          <h3 class="font-semibold text-gray-800">Database & Tools</h3>
+          <ul class="list-disc pl-6">
+            <li>Microsoft SQL Server, MySQL</li>
+            <li>Stored Procedures, Triggers, Optimization</li>
+            <li>Git, GitHub, Azure DevOps</li>
+            <li>Docker (basic)</li>
+            <li>Agile / Scrum Methodology</li>
+            <li>MS Office Suite</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Projects & Achievements -->
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">👨‍💻 Projects & Achievements</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Course Management System</strong> – Built with <em>C# ASP.NET 3 Layer Architecture, Web API, SQL Server, React.JS</em>. Visit: <a class="text-blue-600 hover:underline" href="https://ssumir.github.io/ApiDevelopment_Server/">link</a></li>
-        <li><strong>General & EMI Calculator App</strong> – Developed a responsive calculator app with tabbed interface using <em>HTML, CSS, JavaScript, Tailwind</em>.</li>
-        <li><strong>Mini Web & Android Applications</strong> – Created small-scale projects during diploma training using <em>Java, ASP.NET MVC, SQL Server</em>.</li>
-        <li><strong>SK Ladies Corner-Ecommerce Management System</strong> – ASP.NET Core MVC with Entity Framework. Features authentication, Product management, and reporting modules.</li>
-        <li><strong>Employee Grievance Portal</strong> – Built with <em>JavaScript, Bootstrap, Tailwind</em>. Visit: <a class="text-blue-600 hover:underline" href="https://ssumir.github.io/employee-grievance-portal/empmgt">link</a></li>
+    <!-- Cloud & Global Tools -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Cloud & Global Tools</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Microsoft Azure (Basics)</li>
+        <li>AWS (Basics)</li>
+        <li>REST API Development</li>
+        <li>Microservices (Conceptual Knowledge)</li>
+        <li>CI/CD Pipelines (Azure DevOps, GitHub Actions)</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Projects & Achievements</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Course Management System</strong> – Developed with <em>C# ASP.NET 3 Layer Architecture, CQRS, LINQ, SQL Server, React.JS</em>. Visit: 
+          <a class="text-blue-600 hover:underline" href="https://ssumir.github.io/ApiDevelopment_Server/">link</a>
+        </li>
+        <li><strong>HRIS Prototype</strong> – ASP.NET Core MVC with Entity Framework & LINQ. Features Employee records, Attendance, Payroll, and Grievance handling.</li>
+        <li><strong>General & EMI Calculator App</strong> – Responsive web app using <em>JavaScript, Tailwind</em>.</li>
+        <li><strong>SK Ladies Corner - Ecommerce</strong> – ASP.NET Core MVC with EF, Role-based Authentication, and Reporting Modules.</li>
+        <li><strong>Employee Grievance Portal</strong> – Built with <em>JavaScript, Tailwind</em>. Visit: 
+          <a class="text-blue-600 hover:underline" href="https://ssumir.github.io/employee-grievance-portal/empmgt">link</a>
+        </li>
       </ul>
     </section>
 
     <!-- Competencies -->
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">🤝 Professional Competencies</h2>
-      <ul class="list-disc pl-5 grid grid-cols-2 gap-2">
-        <li>Teamwork & collaboration</li>
-        <li>Integrity & humble approach</li>
-        <li>Work under pressure</li>
-        <li>Patience & adaptability</li>
-        <li>Outstanding communication</li>
-        <li>Eagerness to learn new tech</li>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Professional Competencies</h2>
+      <ul class="list-disc pl-6 grid grid-cols-2 gap-2">
+        <li>Team leadership & collaboration</li>
+        <li>Policy & compliance expertise</li>
+        <li>Problem-solving & critical thinking</li>
+        <li>Adaptability under pressure</li>
+        <li>Cross-cultural communication</li>
+        <li>Continuous learning & innovation</li>
       </ul>
     </section>
 
     <!-- Personal Details -->
-    <section class="mb-6">
-      <h2 class="text-xl font-semibold text-gray-900 border-b pb-1 mb-3">🧑 Personal Details</h2>
-      <ul class="space-y-2">
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Personal Details</h2>
+      <ul class="space-y-1">
         <li><strong>Father's Name:</strong> Md. Abul Kalam</li>
         <li><strong>Mother's Name:</strong> Sayera Begum</li>
         <li><strong>Date of Birth:</strong> 28 Nov 1985</li>
         <li><strong>Gender:</strong> Male</li>
-        <li><strong>Height:</strong> 1.76 Meter</li>
-        <li><strong>Weight:</strong> 80 Kg</li>
         <li><strong>Marital Status:</strong> Married</li>
         <li><strong>Nationality:</strong> Bangladeshi</li>
-        <li><strong>Religion:</strong> Islam</li>
-        <li><strong>Permanent Address:</strong> Sayedpur, Bhabaniganj, Lakshmipur Sadar, Lakshmipur 3702</li>
         <li><strong>Current Location:</strong> Gazipur</li>
         <li><strong>Blood Group:</strong> B+</li>
       </ul>
     </section>
+
+    <!-- Languages -->
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">Languages</h2>
+      <ul class="space-y-1">
+        <li><strong>Bangla:</strong> High</li>
+        <li><strong>English:</strong> Semi High</li>
+      </ul>
+    </section>
+
+    <!-- References -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-900 border-b pb-1 mb-3">References</h2>
+      <p>Available upon request.</p>
+    </section>
   </div>
 
   <!-- Footer Buttons -->
-  <div class="fixed bottom-0 left-0 right-0 bg-gray-100 py-2 shadow-inner flex justify-center gap-4 print:hidden">
+  <div class="fixed bottom-0 left-0 right-0 bg-gray-100 py-3 shadow-inner flex justify-center gap-6 print:hidden">
     <button onclick="window.print()" 
-      class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-1 px-2 rounded-lg shadow-md transition transform hover:scale-105">
+      class="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded-md shadow-md transition">
       Print
     </button>
     <button onclick="downloadPDF()" 
-      class="bg-green-600 hover:bg-green-700 text-white font-semibold py-1 px-2 rounded-lg shadow-md transition transform hover:scale-105">
+      class="bg-green-700 hover:bg-green-800 text-white font-semibold py-2 px-4 rounded-md shadow-md transition">
       Download PDF
     </button>
   </div>
 
   <script>
-    function closeModal() {
-      document.getElementById('cover-letter-modal').style.display = 'none';
-    }
-
     function downloadPDF() {
       const element = document.getElementById('cv-content');
       const opt = {
-        margin:       [10, 10, 10, 10],
-        filename:     'Saiful_Islam_CV.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2, useCORS: true, logging: true },
-        jsPDF:        { unit: 'pt', format: 'a4', orientation: 'portrait' },
-        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
+        margin: [15, 15, 15, 15],
+        filename: 'Saiful_Islam_CV.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, useCORS: true },
+        jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
       };
       html2pdf().set(opt).from(element).save();
     }
